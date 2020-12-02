@@ -32,8 +32,8 @@ class MonthlyAppointment < Appointment
 end
 #Sub
 class DailyAppointment < Appointment
-    def occurs_on?(hour,day)
-        day == @day && hour == @hour    
+    def occurs_on?(hour,min)
+        hour == @hour && min == @min    
     end
     def to_s 
         "Reunión diaria en #{location} sobre #{purpose} la(s) #{hour}:#{min}."
